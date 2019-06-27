@@ -1,5 +1,5 @@
-# Oxy-Neon-72
-A larger sized version of the Oxy-Neon cursor theme
+# oxy-neon-large
+A larger sized version of the Oxygen Neon cursor theme
 
 Forked from [Querta](https://www.pling.com/u/qwerta/)'s [Oxygen Neon project on gnome-look.org](https://www.gnome-look.org/p/999997/).
 
@@ -13,23 +13,7 @@ Forked from [Querta](https://www.pling.com/u/qwerta/)'s [Oxygen Neon project on 
 
 #### For basic installation
 
-To install the original theme:
-
-```bash
-cd source
-make
-make install
-```
-#### Custom cursor size installation
-
-```bash
-cd source
-SIZE=72 ./exportPNG.sh
-cd $SIZE
-make
-make install
-```
-#### What I did lastnight
+Creates cursors in 32, 48, 64, 72, and 96px sizes.
 
 ```bash
 cd source
@@ -38,19 +22,22 @@ for c in *.cursor; do perl cursor.pl $c; done
 make
 make install
 ```
+
+The `exportPNG.sh` script exports the PNG files from the source SVG files and optimizes the output files.
+
+The `cursor.pl` script updates the 
+
 ## TODO
 
-- Rename project (72 not necessary)
-- Fix `make install` target, permission problem
 - Add missing icons
 
 ## Authors
 
-lophophora@lard.site
+cactus@lophophora.ca
 
 ## License
 
-GPL
+GPL I guess..
 
 ## Acknowledgements
 - Original author [Querta](https://www.pling.com/u/qwerta/)
