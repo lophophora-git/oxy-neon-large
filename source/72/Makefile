@@ -1,11 +1,11 @@
 # Makefile for generating a cursor theme.
 
 # Where to install a theme
-INSTALL_PREFIX = ~/.icons
+INSTALL_PREFIX = ~/.local/share/icons
 # Theme folder name (for make install)
 THEME_NAME = oxy-neon-72
 # Theme version
-THEME_VERSION = 0.2
+THEME_VERSION = 0.3
 
 CURSORS = ../../cursors
 
