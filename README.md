@@ -18,14 +18,14 @@ Creates cursors in 32, 48, 64, 72, and 96px sizes.
 ```bash
 cd source
 ./exportPNG.sh
-for c in *.cursor; do perl cursor.pl $c; done
+perl cursorconf.pl *.cursor
 make
 make install
 ```
 
 The `exportPNG.sh` script exports the PNG files from the source SVG files and optimizes the output files.
 
-The `cursor.pl` script updates the 
+The `cursorconf.pl` script updates the existing xcursorgen .cursor files to include larger PNGs
 
 ## TODO
 
