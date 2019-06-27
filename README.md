@@ -29,6 +29,21 @@ cd $SIZE
 make
 make install
 ```
+#### What I did lastnight
+
+```bash
+cd source
+./exportPNG.sh
+for c in *.cursor; do perl cursor.pl $c; done
+make
+make install
+```
+## TODO
+
+- Rename project (72 not necessary)
+- Fix `make install` target, permission problem
+- Add missing icons
+
 ## Authors
 
 lophophora@lard.site
