@@ -1,3 +1,4 @@
+#!/bin/bash
 # 2019-04-08 - Cursor source conversion script
 # Exports all of the SVG cursor files to a PNG of the specified size
 
@@ -8,7 +9,7 @@ CWD=$(pwd)
 timetotal=0
 FILECOUNT=0
 
-function svgtopng {
+function svgtopng() {
     SIZE=$1
     if [ ! -d "$CWD/$SIZE" ]; then
         mkdir -p $CWD/$SIZE || exit
@@ -38,11 +39,11 @@ function svgtopng {
     done
 }
 
-function makefile {
+function makefile () {
         sed "s/oxy-neon$/&-$SIZE/" <Makefile >./$SIZE/Makefile
 }
 
-function cursorfile {
+function cursorfile() {
     for c in *.cursor; do 
         # Edit the cursor file configuration to reflect the specified size.
         # sed substitutes numeric characters at the start of a line '^'
@@ -53,7 +54,7 @@ function cursorfile {
 }
 
 for size in 48 64 72 96; do
-    svgtopng $size
+	svgtopng $size
     t=$(bc <<< "($timetotal)%86400")
     printf "%d files processed in %0.2f seconds\n\n" $FILECOUNT $t
 done
